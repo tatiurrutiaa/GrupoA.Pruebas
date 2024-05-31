@@ -1,0 +1,32 @@
+PRUEBAS POR CASO DE USO
+
+-INGRESAR ORDEN DE PREPARACIÓN-
+
+-CREAR ORDEN DE SELECCIÓN-
+
+-RETIRO STOCK-
+
+CASO 1
+En menu inicial, tocar botón "Retiro de Stock" => se abre formulario Retiro de Stock
+En campo Orden de Selección, seleccionar "202"
+Presionar botón "Buscar" => se carga lista "Mercadería a retirar":
+	{Posición: 11-34-9, Cantidad: 450, Mercadería: tubos de PVC 
+	 Posición: 20-18-2, Cantidad: 100, Mercadería: sacos de arena}
+Presionar botón "Retirar Stock"
+Se muestra mensaje de confirmación
+Salir del sistema
+En el archivo OrdenesSeleccion.json verificar que exista linea: { completar }
+En el archivo OrdenesPreparacion.json verificar que exista linea: { completar }
+En el archivo Stock.json verificar que exista linea: { completar }
+
+CASO 2
+En menu inicial, tocar botón "Retiro de Stock" => se abre formulario Retiro de Stock
+Presionar botón "Buscar" => mensaje "seleccionar orden"
+
+-EMPAQUETADO-
+
+-CREAR ORDEN DE ENTREGA-
+
+-DESPACHO CON TRANSPORTISTA-
+
+-DESPACHO SIN TRANSPORTISTA-
