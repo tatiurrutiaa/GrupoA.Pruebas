@@ -26,7 +26,7 @@ Presionar botón "Buscar" => mensaje "seleccionar orden"
 -EMPAQUETADO-
 CASO 1
 En menu inicial, tocar boton "Empaquetar" => se abre formulario Empaquetar y muestra una lista de una orden
-Presionar boton "Empaquetar" => se muestra un mensaje con la orden en estado "Preparado"
+Presionar boton "Empaquetar" => se muestra un mensaje con la lista de la orden y que la misma fue empaquetada
 -CREAR ORDEN DE ENTREGA-
 
 -DESPACHO CON TRANSPORTISTA-
