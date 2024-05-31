@@ -24,7 +24,8 @@ En menu inicial, tocar botón "Retiro de Stock" => se abre formulario Retiro de 
 Presionar botón "Buscar" => mensaje "seleccionar orden"
 
 -EMPAQUETADO-
-
+En menu inicial, tocar boton "Empaquetar" => se abre formulario Empaquetar y muestra una lista de una orden
+Presionar boton "Empaquetar" => se muestra un mensaje con la orden en estado "Preparado"
 -CREAR ORDEN DE ENTREGA-
 
 -DESPACHO CON TRANSPORTISTA-
