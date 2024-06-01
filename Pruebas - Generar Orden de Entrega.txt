@@ -1,0 +1,20 @@
+PRUEBAS POR CASO DE USO - Generar Orden de Entrega
+
+-INICIAR SESION EN LA APLICACION . USUARIO: "admin" - CONTRASEÑA "admin" -
+
+-GENERAR ORDEN DE ENTREGA-
+
+CASO 1
+En la pantalla inicial de "Generar Orden de Entrega" , seleccionar una o mas ordenes preparadas. En caso de querer seleccionar mas de una, mantener presionada la tecla Ctrl.
+Una vez seleccionada la orden preparada, procede a presionar el boton "Generar Orden de Entrega"
+Se muestra mensaje de confirmación "Orden de entrega generada para: Orden.."
+Presionar "Volver al menu" o "Atras"
+Salir del sistema.
+
+CASO 2
+En la pantalla inicial de "Generar Orden de Entrega" , procede a presionar el boton "Generar Orden de Entrega".
+Se muestra mensaje de error "Seleccione al menos una orden de preparación primero"
+Presionar el boton "X" de arriba a la derecha.
+Saliste del sistema.
+
+-Ordenes preparadas se acumulan en Estado "Preparadas" y nunca pasan a despacho
