@@ -91,7 +91,7 @@ En el archivo OrdenPreparacion.json verificar que exista linea: { xxx }
 En el archivo OrdenSelección.json verificar que exista linea: { xxx }
 
 CASO 2
-En menu inicial, tocar botón "Generar Orden de Selección" => se abre formulario OrdenSeleccióm
+En menu inicial, tocar botón "Generar Orden de Selección" => se abre formulario OrdenSelección
 Presionar boton "Generar Orden de Selección" => mensaje de error "Seleccionar al menos una orden de preparación"
 
 -RETIRO STOCK-
