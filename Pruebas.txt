@@ -123,7 +123,6 @@ Presionar botón "Atrás" => se bloquea la sección Mercadería a retirar, se va
 
 -EMPAQUETADO-
 CASO 1
-Prueba de visualización de detalles de la orden:
 Orden 1 con productos AA11 (5 bolsas de cemento) y BB22 (100 ladrillos). =>La lista debe mostrar dos filas con los productos y cantidades correctas.
 Presionar el botón Empaquetar con la primera orden visible => Resultado Esperado: Se muestra un mensaje confirmando la orden empaquetada y se muestra la siguiente orden en la lista.
 Continuar presionando el botón EmpaquetarButton hasta empaquetar todas las órdenes => Después de empaquetar la última orden, el mensaje "No hay más órdenes para empaquetar." debe ser mostrado y el botón Empaquetar debe estar deshabilitado.
