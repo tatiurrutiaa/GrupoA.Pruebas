@@ -76,3 +76,13 @@ CASO 3
 -DESPACHO CON TRANSPORTISTA-
 
 -DESPACHO SIN TRANSPORTISTA-
+
+CASO UNICO
+En menu inicial, presionar botón "Despacho sin transportista" => se abre formulario Despacho sin transportista
+Ingresar el DNI del transportista "1234567", seleccionar botón "Aplicar DNI" => Se bloquea el campo del DNI y se desbloquea la chekclist con las ordenes
+Seleccionar "Orden 16" => Se desbloquea el botón de "Generar remito"
+Presionar botón "Generar remito"
+Se muestra mensaje de confirmación del remito
+Salir del sistema
+En el archivo OrdenesPreparacion.json verificar que exista linea: { completar }
+En el archivo Remitos.json verificar que exista linea: { completar }
