@@ -81,7 +81,7 @@ En el archivo OrdenPreparacion.json verificar que exista linea: { xxx }
 -GENERAR ORDEN DE SELECCIÓN-
 
 CASO 1
-En menu inicial, tocar botón "Generar Orden de Selección" => se abre formulario OrdenSeleccióm
+En menu inicial, tocar botón "Generar Orden de Selección" => se abre formulario OrdenSelección
 Se carga la lista de Ordenes de preparación
 Seleccionar las ordenes 14 y 15
 Presionar boton "Generar Orden de Selección"
