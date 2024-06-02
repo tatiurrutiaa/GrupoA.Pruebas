@@ -32,11 +32,70 @@ En la pantalla 'Orden de Preparación', seleccionar en los campos Deposito: "10"
 Tocar botón 'Crear orden'.
 Se muestra mensaje: "Error, el cliente no tiene mercadería almacenada aún".
 
+(modificado para respetar formato pedido por andres)
+CASO 1
+En menu inicial, tocar botón "Cargar Orden de Preparación" => se abre formulario Orden de Preparación
+En campo Cuit, ingresar "20-12345678-9"
+Presionar botón "Siguiente" => Se carga la razón social del cliente, la lista de depósitos y mercadería
+Campo depósito, seleccionar "Caballito"
+Campo mercadería, seleccionar "bolsas de arena"
+Campo cantidad, ingresar "20"
+Presionar boton "agregar" => se agrega un item a la lista, producto bolsas de arena cantidad 20
+Campo mercadería, seleccionar "termos"
+Campo cantidad, ingresar "50"
+Presionar boton "agregar" => se agrega un item a la lista, producto termos cantidad 50
+En campo DNI transportista, ingresar "41672496"
+Presionar boton "Cargar Orden"
+Se muestra mensaje de confirmación
+Salir del sistema
+En el archivo OrdenPreparacion.json verificar que exista linea: { xxx }
 
+CASO 2
+En menu inicial, tocar botón "Cargar Orden de Preparación" => se abre formulario Orden de Preparación
+En campo Cuit, ingresar "hola"
+Presionar botón "Siguiente" => mensaje: "Formato de Cuit inválido. Por favor, ingresar valores numéricos en formato XX-XXXXXXXX-X".
+En campo Cuit, ingresar "12333678911"
+Presionar botón "Siguiente" => mensaje: "Formato de Cuit inválido. Ingresar el CUIT en formato XX-XXXXXXXX-X".
+En campo Cuit, ingresar "20-11111111-9"
+Presionar botón "Siguiente" => mensaje: "No existe Cuit ingresado".
+En campo Cuit, ingresar "23-11111111-3"
+Presionar botón "Siguiente" => mensaje: "El cliente no cuenta con mercadería almacenada en los depósitos aún."
+En campo Cuit, ingresar "20-12345678-9"
+Presionar botón "Siguiente" => Se carga la razón social del cliente, la lista de depósitos y mercadería
+Presionar "Cargar Orden" => mensaje "Por favor, seleccionar un depósito"
+Campo depósito, seleccionar "Caballito"
+Presionar "Cargar Orden" => mensaje "Por favor, cargar al menos una mercadería y cantidad a la lista"
+Campo mercadería, seleccionar "bolsas de arena"
+Campo cantidad, ingresar "hola" => no permite ingresar "hola"
+Campo cantidad, ingresar "2000"
+Presionar "Cargar Orden" => mensaje "Por favor, cargar al menos una mercadería y cantidad a la lista"
+Presionar boton "Agregar" => se agrega un item a la lista, "producto bolsas de arena cantidad 2000"
+Presionar "Cargar Orden" => Mensaje error "mercadería insuficiente"
+Seleccionar "producto bolsas de arena cantidad 2000" de la lista
+Presionar botón Eliminar => se elimina "producto bolsas de arena cantidad 2000" de la lista
+Campo mercadería, seleccionar "bolsas de arena"
+Campo cantidad, ingresar "20"
+Presionar boton "agregar" => se agrega un item a la lista, "producto bolsas de arena cantidad 20"
+Presionar boton "Cargar Orden"
+Se muestra mensaje de confirmación
+Salir del sistema
+En el archivo OrdenPreparacion.json verificar que exista linea: { xxx }
 
--INGRESAR ORDEN DE PREPARACIÓN-
+-GENERAR ORDEN DE SELECCIÓN-
 
--CREAR ORDEN DE SELECCIÓN-
+CASO 1
+En menu inicial, tocar botón "Generar Orden de Selección" => se abre formulario OrdenSeleccióm
+Se carga la lista de Ordenes de preparación
+Seleccionar las ordenes 14 y 15
+Presionar boton "Generar Orden de Selección"
+Se muestra mensaje de confirmación
+Salir del sistema
+En el archivo OrdenPreparacion.json verificar que exista linea: { xxx }
+En el archivo OrdenSelección.json verificar que exista linea: { xxx }
+
+CASO 2
+En menu inicial, tocar botón "Generar Orden de Selección" => se abre formulario OrdenSeleccióm
+Presionar boton "Generar Orden de Selección" => mensaje de error "Seleccionar al menos una orden de preparación"
 
 -RETIRO STOCK-
 
@@ -49,13 +108,13 @@ Presionar botón "Buscar" => se carga lista "Mercadería a retirar":
 Presionar botón "Retirar Stock"
 Se muestra mensaje de confirmación
 Salir del sistema
-En el archivo OrdenesSeleccion.json verificar que exista linea: { completar }
-En el archivo OrdenesPreparacion.json verificar que exista linea: { completar }
-En el archivo Stock.json verificar que exista linea: { completar }
+En el archivo OrdenesSeleccion.json verificar que exista linea: { xxx }
+En el archivo OrdenesPreparacion.json verificar que exista linea: { xxx }
+En el archivo Stock.json verificar que exista linea: { xxx }
 
 CASO 2
 En menu inicial, tocar botón "Retiro de Stock" => se abre formulario Retiro de Stock
-Presionar botón "Buscar" => mensaje "seleccionar orden"
+Presionar botón "Buscar" => mensaje "Por favor, seleccione una orden de selección."
 
 -EMPAQUETADO-
 CASO 1
@@ -71,7 +130,21 @@ CASO 3
  *Prueba de empaquetar todas las órdenes:*
     - *Entrada:* Continuar presionando el botón EmpaquetarButton hasta empaquetar todas las órdenes.
     - *Resultado Esperado:* Después de empaquetar la última orden, el mensaje "No hay más órdenes para empaquetar." debe ser mostrado y 	el botón Empaquetar debe estar deshabilitado.
+
 -CREAR ORDEN DE ENTREGA-
+
+CASO 1
+En menu inicial, tocar botón "Generar Orden de Entrega" => se abre formulario OrdenEntrega
+Seleccionar las ordenes 23 y 25
+Presionar boton "Generar Orden de Entrega"
+Se muestra mensaje de confirmación
+Salir del sistema
+En el archivo OrdenPreparacion.json verificar que exista linea: { xxx }
+En el archivo OrdenEntrega.json verificar que exista linea: { xxx }
+
+CASO 2
+En menu inicial, tocar botón "Generar Orden de Entrega" => se abre formulario OrdenEntrega
+Presionar boton "Generar Orden de Entrega" => mensaje de error "Seleccione al menos una orden de preparación primero"
 
 -DESPACHO CON TRANSPORTISTA-
 
