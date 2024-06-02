@@ -118,18 +118,11 @@ Presionar botón "Buscar" => mensaje "Por favor, seleccione una orden de selecci
 
 -EMPAQUETADO-
 CASO 1
-*Prueba de visualización de detalles de la orden:*
-    - *Entrada:* Orden 1 con productos AA11 (5 bolsas de cemento) y BB22 (100 ladrillos).
-    - *Resultado Esperado:* La lista EmpaquetarListView debe mostrar dos filas con los productos y cantidades correctas.
-
-Caso 2
-*Prueba de empaquetar la primera orden:*
-    - *Entrada:* Presionar el botón EmpaquetarButton con la primera orden visible.
-    - *Resultado Esperado:* Se muestra un mensaje confirmando la orden empaquetada y se muestra la siguiente orden en la lista.
-CASO 3
- *Prueba de empaquetar todas las órdenes:*
-    - *Entrada:* Continuar presionando el botón EmpaquetarButton hasta empaquetar todas las órdenes.
-    - *Resultado Esperado:* Después de empaquetar la última orden, el mensaje "No hay más órdenes para empaquetar." debe ser mostrado y 	el botón Empaquetar debe estar deshabilitado.
+Prueba de visualización de detalles de la orden:
+Orden 1 con productos AA11 (5 bolsas de cemento) y BB22 (100 ladrillos). =>La lista debe mostrar dos filas con los productos y cantidades correctas.
+Presionar el botón Empaquetar con la primera orden visible => Resultado Esperado: Se muestra un mensaje confirmando la orden empaquetada y se muestra la siguiente orden en la lista.
+Continuar presionando el botón EmpaquetarButton hasta empaquetar todas las órdenes => Después de empaquetar la última orden, el mensaje "No hay más órdenes para empaquetar." debe ser mostrado y el botón Empaquetar debe estar deshabilitado.
+En el archivo OrdenesPreparacion.json verificar que exista linea: { completar }
 
 -CREAR ORDEN DE ENTREGA-
 
