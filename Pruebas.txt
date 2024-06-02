@@ -52,12 +52,9 @@ En el archivo OrdenPreparacion.json verificar que exista linea: { xxx }
 
 CASO 2
 En menu inicial, tocar botón "Cargar Orden de Preparación" => se abre formulario Orden de Preparación
-En campo Cuit, ingresar "hola"
-Presionar botón "Siguiente" => mensaje: "Formato de Cuit inválido. Por favor, ingresar valores numéricos en formato XX-XXXXXXXX-X".
-En campo Cuit, ingresar "12333678911"
-Presionar botón "Siguiente" => mensaje: "Formato de Cuit inválido. Ingresar el CUIT en formato XX-XXXXXXXX-X".
+En campo Cuit, ingresar "hola" => no permite ingresar "hola"
 En campo Cuit, ingresar "20-11111111-9"
-Presionar botón "Siguiente" => mensaje: "No existe Cuit ingresado".
+Presionar botón "Siguiente" => mensaje: "No existe el Cuit ingresado".
 En campo Cuit, ingresar "23-11111111-3"
 Presionar botón "Siguiente" => mensaje: "El cliente no cuenta con mercadería almacenada en los depósitos aún."
 En campo Cuit, ingresar "20-12345678-9"
