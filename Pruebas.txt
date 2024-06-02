@@ -142,6 +142,24 @@ Presionar boton "Generar Orden de Entrega" => mensaje de error "Seleccione al me
 
 -DESPACHO CON TRANSPORTISTA-
 
+CASO 1
+En menu inicial, presionar botón "Despacho con transportista" => se abre formulario Despacho con transportista
+Ingresar el DNI del transportista "41672496", seleccionar botón "Verificar" => Se bloquea el campo del DNI y se desbloquea la chekclist con las ordenes
+Seleccionar "Orden 22" => Se desbloquea el botón de "Generar remito"
+Presionar botón "Generar remito"
+Se muestra mensaje de confirmación del remito
+Salir del sistema
+En el archivo OrdenesPreparacion.json verificar que exista linea: { completar }
+En el archivo Remitos.json verificar que exista linea: { completar }
+
+CASO 2
+En menu inicial, presionar botón "Despacho con transportista" => se abre formulario Despacho con transportista
+Ingresar el DNI del transportista "hola" => no permite ingresar "hola"
+Ingresar el DNI del transportista "11111111", seleccionar botón "Verificar" => mensaje "No existen ordenes asociadas al DNI 11111111"
+
+CASO 3
+En menu inicial, presionar botón "Despacho sin transportista" => se muestra un MessageBox informando que no hay ordenes para despachar
+
 -DESPACHO SIN TRANSPORTISTA-
 
 CASO 1 | Hay ordenes para despacahar
