@@ -1,5 +1,19 @@
 PRUEBAS POR CASO DE USO
 
+INICIAR SESIÓN
+
+CASO 1
+Campo usuario, ingresar "admin"
+Campo contraseña, ingresar "admin"
+Presionar Iniciar Sesión => se abre formulario Menu
+
+CASO 2
+Presionar Iniciar Sesión => mensaje "Por favor, complete el campo Usuario"
+Campo usuario, ingresar "admin"
+Presionar Iniciar Sesión => mensaje "Por favor, complete el campo contraseña"
+Campo contraseña, ingresar "hola"
+Presionar Iniciar Sesión => mensaje "Acceso denegado. Usuario o contraseña incorrectos."
+
 -CARGAR ORDEN DE PREPARACIÓN-
 
 CASO 1
