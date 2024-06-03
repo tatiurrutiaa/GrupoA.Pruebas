@@ -5,37 +5,6 @@ PRUEBAS POR CASO DE USO
 CASO 1
 En menu inicial, tocar botón "Cargar Orden de Preparación" => se abre formulario Orden de Preparación
 En campo Cuit, ingresar "20-12345678-9"
-Presionar botón "Siguiente" => Se carga la razón social del cliente.
-
-CASO 2
-En menu inicial, tocar botón "Cargar Orden de Preparación" => se abre formulario Orden de Preparación
-En campo Cuit, ingresar "20-12333678-9"
-Se muestra mensaje: "No existe Cuit ingresado".
-
-CASO 3
-En menu inicial, tocar botón "Cargar Orden de Preparación" => se abre formulario Orden de Preparación
-En campo Cuit, ingresar "12333678-9"
-Se muestra mensaje: "Formato de Cuit inválido".
-
-CASO 4
-En la pantalla 'Orden de Preparación', seleccionar en los campos Deposito: "3", Mercaderia: "Remera" y Cantidad: "10" 
-Tocar botón 'Crear orden'.
-Se muestra mensaje: "Orden N° XXXXX generada con éxito".
-
-CASO 5
-En la pantalla 'Orden de Preparación', seleccionar en los campos Deposito: "3", Mercaderia: "Remera" y Cantidad: "300" 
-Tocar botón 'Crear orden'.
-Se muestra mensaje: "Error, Mercadería insuficiente".
-
-CASO 6
-En la pantalla 'Orden de Preparación', seleccionar en los campos Deposito: "10", Mercaderia: "Remera" y Cantidad: "3" 
-Tocar botón 'Crear orden'.
-Se muestra mensaje: "Error, el cliente no tiene mercadería almacenada aún".
-
-(modificado para respetar formato pedido por andres)
-CASO 1
-En menu inicial, tocar botón "Cargar Orden de Preparación" => se abre formulario Orden de Preparación
-En campo Cuit, ingresar "20-12345678-9"
 Presionar botón "Siguiente" => Se carga la razón social del cliente, la lista de depósitos y mercadería
 Campo depósito, seleccionar "Caballito"
 Campo mercadería, seleccionar "bolsas de arena"
