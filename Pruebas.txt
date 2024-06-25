@@ -35,12 +35,14 @@ Presionar boton "Cargar Orden"
 Se muestra mensaje de confirmación
 Salir del sistema
 En el archivo OrdenPreparacion.json verificar que exista linea:
-{"NroOrdenPrep":61,"CuitCliente":"27-12345678-5","Estado":0,"Fecha":"2024-06-24T18:24:20.1937281-03:00","DNITransportista":41672496,"NroDeposito":1,"mercaderiaDetalle":[{"CodProducto":1,"CantidadProducto":20},{"CodProducto":2,"CantidadProducto":40}]}
+{"NroOrdenPrep":61,"CuitCliente":"27-12345678-5","NroDeposito":1,"Estado":0,"Fecha":"2024-06-24T22:01:28.7846558-03:00","DNITransportista":41672496,"mercaderiaDetalle":[{"CodProducto":1,"CantidadProducto":20},{"CodProducto":2,"CantidadProducto":40}]}
+En el archivo Stock.json verificar que exista linea:
+{"CuitCliente":"27-12345678-5","NroDeposito":1,"CodProducto":1,"Posicion":"42-29-7","Cantidad":20,"Estado":2},{"CuitCliente":"27-12345678-5","NroDeposito":1,"CodProducto":2,"Posicion":"79-81-7","Cantidad":40,"Estado":2}]
 
 CASO 2
 En menu inicial, tocar botón "Cargar Orden de Preparación" => se abre formulario Orden de Preparación
 En campo Cuit, ingresar "hola" => no permite ingresar "hola"
-En campo Cuit, ingresar "20-11111111-9"
+En campo Cuit, ingresar "27-12345678-5"
 Presionar botón "Siguiente" => mensaje: "Cliente no encontrado".
 En campo Cuit, ingresar "27-12345678-5"
 Presionar botón "Siguiente" => Se carga la razón social del cliente (Endre SRL), el codigo de Orden (62), la fecha (fecha actual) y la lista de depósitos (Almacén Central).
@@ -92,8 +94,9 @@ En menu inicial, tocar botón "Retiro de Stock" => se abre formulario Retiro de 
 En campo Orden de Selección, seleccionar "11"
 Presionar botón "Buscar" => se bloquea la sección Orden de selección y se habilita la sección mercadería a retirar.
 Se carga lista "Mercadería a retirar":
-	{Posición: 01-12-1, Cantidad: 100, Cod. Producto: 1, Mercadería: bolsas de cemento 
-	 Posición: 79-81-7, Cantidad: 40, Cod. Producto: 2, Mercadería: termos 1lt}
+	{Posición: 12-23-4, Cantidad: 100, Cod. Producto: 1, Mercadería: bolsas de cemento 
+	 Posición: 26-34-5, Cantidad: 120, Cod. Producto: 2, Mercadería: termos 1lt
+	}
 Presionar botón "Retirar Stock"
 Se muestra mensaje de confirmación
 Salir del sistema
@@ -103,7 +106,7 @@ En el archivo OrdenesPreparacion.json verificar que exista linea:
 (verificar que para las ordenes seleccionadas el Estado sea igual a 2)
 {"NroOrdenPrep":41,"CuitCliente":"27-12345678-5","Estado":2,"Fecha":"2024-06-11T00:00:00","DNITransportista":40567890,"NroDeposito":1,"mercaderiaDetalle":[{"CodProducto":1,"CantidadProducto":100},{"CodProducto":2,"CantidadProducto":120},{"CodProducto":3,"CantidadProducto":150}]},{"NroOrdenPrep":42,"CuitCliente":"22-12345678-9","Estado":2,"Fecha":"2024-06-12T00:00:00","DNITransportista":null,"NroDeposito":1,"mercaderiaDetalle":[{"CodProducto":4,"CantidadProducto":200}]}
 En el archivo Stock.json verificar que exista linea:
-{"CuitCliente":"27-12345678-5","Posicion":"42-29-7","Cantidad":20,"CodProducto":1,"Estado":2,"NroDeposito":1},{"CuitCliente":"27-12345678-5","Posicion":"79-81-7","Cantidad":40,"CodProducto":2,"Estado":2,"NroDeposito":1},{"CuitCliente":"27-12345678-5","Posicion":"","Cantidad":100,"CodProducto":1,"Estado":3,"NroDeposito":0}]
+{"CuitCliente":"27-12345678-5","NroDeposito":0,"CodProducto":1,"Posicion":"","Cantidad":100,"Estado":3}]
 
 CASO 2
 En menu inicial, tocar botón "Retiro de Stock" => se abre formulario Retiro de Stock
