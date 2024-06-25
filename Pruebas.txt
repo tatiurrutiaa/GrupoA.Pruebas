@@ -122,7 +122,9 @@ En menu inicial, tocar botón "Empaquetado" => se abre formulario Empaquetado
 Orden 1 con productos AA11 (5 bolsas de cemento) y BB22 (100 ladrillos). =>La lista debe mostrar dos filas con los productos y cantidades correctas.
 Presionar el botón Empaquetar con la primera orden visible => Resultado Esperado: Se muestra un mensaje confirmando la orden empaquetada y se muestra la siguiente orden en la lista.
 Continuar presionando el botón EmpaquetarButton hasta empaquetar todas las órdenes => Después de empaquetar la última orden, el mensaje "No hay más órdenes para empaquetar." debe ser mostrado y el botón Empaquetar debe estar deshabilitado.
-En el archivo OrdenesPreparacion.json verificar que exista linea: { completar }
+En el archivo OrdenesPreparacion.json verificar que exista linea:
+(verificar que para las ordenes seleccionadas el Estado sea igual a 3)
+{"NroOrdenPrep":31,"CuitCliente":"27-12345678-5","NroDeposito":1,"Estado":3,"Fecha":"2024-06-01T00:00:00","DNITransportista":40567890,"mercaderiaDetalle":[{"CodProducto":1,"CantidadProducto":100},{"CodProducto":2,"CantidadProducto":120},{"CodProducto":3,"CantidadProducto":150}]}
 
 -CREAR ORDEN DE ENTREGA-
 
